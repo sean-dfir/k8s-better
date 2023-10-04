@@ -53,6 +53,7 @@ Vagrant.configure("2") do |config|
         "CALICO_VERSION" => settings["software"]["calico"],
         "CILIUM_VERSION" => settings["software"]["cilium"],
         "TETRAGON_VERSION" => settings["software"]["tetragon"],
+        "GO_VERSION" => settings["software"]["go"],
         "CONTROL_IP" => settings["network"]["control_ip"],
         "POD_CIDR" => settings["network"]["pod_cidr"],
         "SERVICE_CIDR" => settings["network"]["service_cidr"]
