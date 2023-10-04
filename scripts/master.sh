@@ -83,7 +83,7 @@ rm tetra-${GOOS}-${GOARCH}.tar.gz{,.sha256sum}
 
 # Install TracingPolicy for monitoring sys_write syscalls
 # More TracingPolicies available at https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml
+# kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml
 
 # Install Demo Applications
 kubectl create -f https://raw.githubusercontent.com/cilium/cilium/v1.11/examples/minikube/http-sw-app.yaml
