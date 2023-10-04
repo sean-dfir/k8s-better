@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     master.vm.provision "shell",
       env: {
         "CALICO_VERSION" => settings["software"]["calico"],
+        "CILIUM_VERSION" => settings["software"]["cilium"],
         "CONTROL_IP" => settings["network"]["control_ip"],
         "POD_CIDR" => settings["network"]["pod_cidr"],
         "SERVICE_CIDR" => settings["network"]["service_cidr"]
