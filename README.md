@@ -10,6 +10,7 @@ Installed Security Tooling:
 Tetragon supports [Tracing Policies](https://tetragon.io/docs/concepts/tracing-policy/), which are a user-configurable Kubernetes custome resource (CR) that can trace arbitrary events in the kernel and also take actions. The Tetragon repo has examples of [TracingPolicies](https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy). 
 
 TracingPolices are deployed using the Kuberentes CLI `kubectl`:
+
 ```kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml```
 
 
