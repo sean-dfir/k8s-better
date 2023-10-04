@@ -1,5 +1,5 @@
-# Background
-vagrant-k8s is a quickly deployable Kubernetes cluster with preinstalled security tooling to support alerting and detection research.
+# k8s-better
+k8s-better is a quickly deployable Kubernetes cluster with preinstalled security tooling to support alerting and detection research.
 
 Installed Security Tooling:
 * [Cilium](https://github.com/cilium/cilium) - eBPF-based CNI that provides networking, observability, and L3/L7 security controls. 
@@ -8,17 +8,6 @@ Installed Security Tooling:
 
 This is a fork of [vagrant-kubeadm-kubernetes](https://github.com/techiescamp/vagrant-kubeadm-kubernetes), a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
 
-## Documentation
-
-Current k8s version for CKA, CKAD, and CKS exam: 1.27
-
-Refer to this link for documentation: https://devopscube.com/kubernetes-cluster-vagrant/
-
-## 🚀 CKA, CKAD, CKS, or KCNA Coupon Codes
-
-If you are preparing for CKA, CKAD, CKS, or KCNA exam, **save 20%** today using code **SCRIPT20** at https://kube.promo/devops. It is a limited-time offer. Or Check out [Linux Foundation coupon](https://scriptcrunch.com/linux-foundation-coupon/) page for the latest voucher codes.
-
-For the best savings, opt for the CKA + CKS bundle (**$210 Savings)**. Use code **DCUBE20** at https://kube.promo/bundle
 
 ## Prerequisites
 
@@ -47,8 +36,8 @@ https://discuss.hashicorp.com/t/vagrant-2-2-18-osx-11-6-cannot-create-private-ne
 To provision the cluster, execute the following commands.
 
 ```shell
-git clone https://github.com/scriptcamp/vagrant-kubeadm-kubernetes.git
-cd vagrant-kubeadm-kubernetes
+git clone https://github.com/sean-dfir/k8s-better.git
+cd k8s-better
 vagrant up
 ```
 ## Set Kubeconfig file variable
