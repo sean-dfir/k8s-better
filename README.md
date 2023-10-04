@@ -6,7 +6,7 @@ Installed Security Tooling:
 * [Tetragon](https://github.com/cilium/tetragon) - an add-on component to Cilium that provides process and syscall visibility with Kubernetes context that supports container-level visibility and attribution.
 	* Example TracingPolicy installed for monitoring sys_write syscalls from the Tetragon repo's example [TracingPolicies](https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy). 
 
-This is a fork of https://github.com/techiescamp/vagrant-kubeadm-kubernetes, a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
+This is a fork of [vagrant-kubeadm-kubernetes](https://github.com/techiescamp/vagrant-kubeadm-kubernetes), a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
 
 ## Documentation
 
