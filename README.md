@@ -1,5 +1,11 @@
+# Background
+vagrant-k8s is a quickly deployable Kubernetes cluster with preinstalled security tooling to support alerting and detection research.
 
-# Vagrantfile and Scripts to Automate Kubernetes Setup using Kubeadm [Practice Environment for CKA/CKAD and CKS Exams]
+Installed Security Tooling:
+* [Cilium](https://github.com/cilium/cilium) - eBPF-based CSNI that provides networking, observability, and L3/L7 security controls. 
+* [Tetragon](https://github.com/cilium/tetragon) - an add-on component to Cilium that provides process and syscall visibility with Kubernetes context that supports container-level visibility and attribution. 
+
+This is a fork of https://github.com/techiescamp/vagrant-kubeadm-kubernetes, a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
 
 ## Documentation
 
