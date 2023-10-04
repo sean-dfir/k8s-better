@@ -35,8 +35,7 @@ chmod +x $config_path/join.sh
 kubeadm token create --print-join-command > $config_path/join.sh
 
 # Install Calico Network Plugin
-
-#curl https://raw.githubusercontent.com/projectcalico/calico/v${CALICO_VERSION}/manifests/calico.yaml -O
+# curl https://raw.githubusercontent.com/projectcalico/calico/v${CALICO_VERSION}/manifests/calico.yaml -O
 
 #kubectl apply -f calico.yaml     
 
@@ -53,10 +52,11 @@ helm repo update
 helm install cilium cilium/cilium --version ${CILIUM_VERSION}  --namespace kube-system
 
 # Install Tetragon 
-helm install tetragon cilium/tetragon -n kube-system
+helm install tetragon cilium/tetragon --version $TETRAGON_VERSION} --namespace kube-system
 #kubectl rollout status -n kube-system ds/tetragon -w
 
 # Install TracingPolicy for monitoring sys_write syscalls
+# More TracingPolicies available at https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy
 kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml
 
 # Install go
