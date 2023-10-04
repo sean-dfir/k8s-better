@@ -1,5 +1,5 @@
 # k8s-better
-k8s-better is a quickly deployable Kubernetes cluster with preinstalled security tooling to support alerting and detection research.
+k8s-better is a quickly deployable Kubernetes cluster with preinstalled security tooling using Vagrant to support alerting and detection research.
 
 Installed Security Tooling:
 * [Cilium](https://github.com/cilium/cilium) - eBPF-based CNI that provides networking, observability, and L3/L7 security controls. 
