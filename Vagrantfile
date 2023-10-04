@@ -50,7 +50,6 @@ Vagrant.configure("2") do |config|
       path: "scripts/common.sh"
     master.vm.provision "shell",
       env: {
-        "CALICO_VERSION" => settings["software"]["calico"],
         "CILIUM_VERSION" => settings["software"]["cilium"],
         "TETRAGON_VERSION" => settings["software"]["tetragon"],
         "GO_VERSION" => settings["software"]["go"],

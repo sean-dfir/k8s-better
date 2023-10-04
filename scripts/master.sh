@@ -34,11 +34,6 @@ chmod +x $config_path/join.sh
 
 kubeadm token create --print-join-command > $config_path/join.sh
 
-# Install Calico Network Plugin
-# curl https://raw.githubusercontent.com/projectcalico/calico/v${CALICO_VERSION}/manifests/calico.yaml -O
-
-#kubectl apply -f calico.yaml     
-
 # Install Helm
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
