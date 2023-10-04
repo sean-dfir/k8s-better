@@ -52,7 +52,7 @@ helm repo update
 helm install cilium cilium/cilium --version ${CILIUM_VERSION}  --namespace kube-system
 
 # Install Tetragon 
-helm install tetragon cilium/tetragon --version $TETRAGON_VERSION} --namespace kube-system
+helm install tetragon cilium/tetragon --version ${TETRAGON_VERSION} --namespace kube-system
 #kubectl rollout status -n kube-system ds/tetragon -w
 
 # Install TracingPolicy for monitoring sys_write syscalls
@@ -60,8 +60,8 @@ helm install tetragon cilium/tetragon --version $TETRAGON_VERSION} --namespace k
 kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml
 
 # Install go
-wget -c https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
-sudo tar -xzf go1.14.2.linux-amd64.tar.gz -C /usr/local
+wget -c https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz
+sudo tar -xzf ${GO_VERSION}.linux-amd64.tar.gz -C /usr/local
 su vagrant
 export PATH=$PATH:/usr/local/go/bin
 source ~/.profile
