@@ -1,13 +1,17 @@
 # k8s-better
 k8s-better is a quickly deployable Kubernetes cluster with preinstalled security tooling using Vagrant to support alerting and detection research.
 
+This is a fork of [vagrant-kubeadm-kubernetes](https://github.com/techiescamp/vagrant-kubeadm-kubernetes), a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
+
 Installed Security Tooling:
 * [Cilium](https://github.com/cilium/cilium) - eBPF-based CNI that provides networking, observability, and L3/L7 security controls. 
 * [Tetragon](https://github.com/cilium/tetragon) - an add-on component to Cilium that provides process and syscall visibility with Kubernetes context that supports container-level visibility and attribution.
 
-Tetragon supports [Tracing Policies](https://tetragon.io/docs/concepts/tracing-policy/), which are user-configurable Kubernetes custome resources that can trace arbitrary events in the kernel and optionally define actions on a match. The Tetragon repo has examples of [TracingPolicies](https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy). 
+Tetragon supports [Tracing Policies](https://tetragon.io/docs/concepts/tracing-policy/), which are a user-configurable Kubernetes custome resource (CR) that can trace arbitrary events in the kernel and also take actions. The Tetragon repo has examples of [TracingPolicies](https://github.com/cilium/tetragon/tree/main/examples/tracingpolicy). 
 
-This is a fork of [vagrant-kubeadm-kubernetes](https://github.com/techiescamp/vagrant-kubeadm-kubernetes), a TechiesCamp repo that provides a Vagrant file and associated scripts/configs to automate creating a practice environment k8s cluster using Kubeadm for some certifications. 
+TracingPolices are deployed using the Kuberentes CLI `kubectl`:
+```kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/write.yaml```
+
 
 
 ## Prerequisites
